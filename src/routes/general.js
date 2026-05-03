@@ -49,6 +49,11 @@ publicRouter.get("/review/:isbn", (req, res) => {
 });
 
 // Task 10: Get all books – Using async callback function (Axios)
+/**
+ * Retrieves the complete list of books by making an internal HTTP request using Axios.
+ * This route uses an asynchronous function and 'await' to ensure the books are fetched
+ * successfully before returning them to the client.
+ */
 publicRouter.get("/server/asyncactions/getallbooks", async (req, res) => {
   try {
     const response = await axios.get("http://localhost:3000/");
@@ -59,6 +64,11 @@ publicRouter.get("/server/asyncactions/getallbooks", async (req, res) => {
 });
 
 // Task 11: Get book details based on ISBN – Using Promises (Axios)
+/**
+ * Fetches specific book details by ISBN using Axios with Promises.
+ * It captures the ISBN from the route parameter and makes a GET request to the local lookup route.
+ * The use of .then() and .catch() demonstrates standard Promise-based asynchronous handling.
+ */
 publicRouter.get("/server/asyncactions/isbn/:isbn", (req, res) => {
   const isbn = req.params.isbn;
   axios.get(`http://localhost:3000/isbn/${isbn}`)
@@ -74,6 +84,11 @@ publicRouter.get("/server/asyncactions/isbn/:isbn", (req, res) => {
 });
 
 // Task 12: Get book details based on Author – Using Axios
+/**
+ * Retreives books written by a specific author using an Axios asynchronous request.
+ * It takes the author's name from the URL, performs an internal search, and returns
+ * the matching results to the requester.
+ */
 publicRouter.get("/server/asyncactions/author/:author", async (req, res) => {
   const author = req.params.author;
   try {
@@ -85,6 +100,11 @@ publicRouter.get("/server/asyncactions/author/:author", async (req, res) => {
 });
 
 // Task 13: Get book details based on Title – Using Axios
+/**
+ * Searches for book details by title through an Axios-powered internal request.
+ * This implementation provides a clean way to search for books by their title parameter,
+ * utilizing high-level async/await patterns for readability and error resilience.
+ */
 publicRouter.get("/server/asyncactions/title/:title", async (req, res) => {
   const title = req.params.title;
   try {
