@@ -1,0 +1,13 @@
+# Task 4: Get books by title
+cURL Command:
+curl http://localhost:3000/api/title/Things%20Fall%20Apart
+
+Output:
+[
+  {
+    "isbn": "1",
+    "author": "Chinua Achebe",
+    "title": "Things Fall Apart",
+    "reviews": {}
+  }
+]

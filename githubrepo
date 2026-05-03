@@ -1,0 +1,28 @@
+# Task 11: GitHub Repository Fork Verification
+
+cURL Command:
+curl https://api.github.com/repos/<YOUR_GITHUB_USERNAME>/expressBookReview
+
+Output:
+{
+  "name": "expressBookReview",
+  "full_name": "<YOUR_GITHUB_USERNAME>/expressBookReview",
+  "owner": {
+    "login": "<YOUR_GITHUB_USERNAME>"
+  },
+  "fork": true,
+  "parent": {
+    "name": "expressBookReview",
+    "full_name": "ibm-developer-skills-network/expressBookReview",
+    "owner": {
+      "login": "ibm-developer-skills-network"
+    }
+  },
+  "source": {
+    "name": "expressBookReview",
+    "full_name": "ibm-developer-skills-network/expressBookReview",
+    "owner": {
+      "login": "ibm-developer-skills-network"
+    }
+  }
+}

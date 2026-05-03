@@ -1,0 +1,6 @@
+{
+  "name": "Express Bookshelf",
+  "description": "A RESTful server-side book review application featuring user authentication, book searching, and review management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

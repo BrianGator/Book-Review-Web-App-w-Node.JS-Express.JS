@@ -1,0 +1,11 @@
+# Task 8: Add/Modify a book review
+cURL Command:
+curl -X PUT -b cookie.txt -H "Content-Type: application/json" -d '{"review": "Amazing book!"}' http://localhost:3000/api/auth/review/1
+
+Output:
+{
+  "message": "The review for the book with ISBN 1 has been added/updated.",
+  "reviews": {
+    "tester": "Amazing book!"
+  }
+}
