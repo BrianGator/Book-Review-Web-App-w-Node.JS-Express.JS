@@ -3,8 +3,8 @@ import path from "path";
 import { createServer as createViteServer } from "vite";
 import session from "express-session";
 import jwt from "jsonwebtoken";
-import { publicRouter } from "./src/routes/general";
-import { authRouter } from "./src/routes/auth";
+import { publicRouter } from "./src/routes/general.js";
+import { authRouter } from "./src/routes/auth.js";
 
 async function startServer() {
   const app = express();
@@ -18,10 +18,10 @@ async function startServer() {
   }));
 
   // Authentication Middleware
-  app.use("/api/auth/*", (req: any, res, next) => {
+  app.use("/api/auth/*", (req, res, next) => {
     if (req.session.authorization) {
       const token = req.session.authorization['accessToken'];
-      jwt.verify(token, "access", (err: any, user: any) => {
+      jwt.verify(token, "access", (err, user) => {
         if (!err) {
           req.user = user;
           next();

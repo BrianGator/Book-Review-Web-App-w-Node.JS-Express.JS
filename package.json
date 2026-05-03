@@ -8,11 +8,11 @@
     "url": "https://github.com/BrianGator/Book-Review-Web-App-w-Node.JS-Express.JS.git"
   },
   "scripts": {
-    "dev": "tsx server.ts",
+    "dev": "node server.js",
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@google/genai": "^1.29.0",

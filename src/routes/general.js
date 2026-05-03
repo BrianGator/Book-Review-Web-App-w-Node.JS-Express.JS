@@ -1,6 +1,6 @@
 import express from "express";
-import { books } from "../db/books";
-import { users } from "../db/users";
+import { books } from "../db/books.js";
+import { users } from "../db/users.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
@@ -63,7 +63,7 @@ publicRouter.post("/register", async (req, res) => {
 });
 
 // Task 7: Login user
-publicRouter.post("/login", async (req: any, res) => {
+publicRouter.post("/login", async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
     return res.status(400).json({ message: "Username and password required" });

@@ -1,28 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Book as BookIcon, Star, User, LogIn, LogOut, Trash2, Edit3, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import * as api from './services/apiService';
+import * as api from './services/apiService.js';
 import axios from 'axios';
-import { FormEvent } from 'react';
-
-interface Book {
-  isbn: string;
-  author: string;
-  title: string;
-  reviews: { [username: string]: string };
-}
 
 export default function App() {
-  const [books, setBooks] = useState<Book[]>([]);
+  const [books, setBooks] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchType, setSearchType] = useState<"isbn" | "author" | "title">("title");
+  const [searchType, setSearchType] = useState("title");
   const [loading, setLoading] = useState(true);
-  const [selectedBook, setSelectedBook] = useState<Book | null>(null);
-  const [user, setUser] = useState<{ username: string } | null>(null);
-  const [authMode, setAuthMode] = useState<"login" | "register">("login");
+  const [selectedBook, setSelectedBook] = useState(null);
+  const [user, setUser] = useState(null);
+  const [authMode, setAuthMode] = useState("login");
   const [authData, setAuthData] = useState({ username: "", password: "" });
   const [newReview, setNewReview] = useState("");
-  const [message, setMessage] = useState<{ text: string, type: "success" | "error" } | null>(null);
+  const [message, setMessage] = useState(null);
 
   useEffect(() => {
     fetchBooks();
@@ -47,7 +39,7 @@ export default function App() {
     }
     setLoading(true);
     try {
-      let results: any;
+      let results;
       if (searchType === "isbn") {
         const book = await api.getBookByISBN(searchQuery);
         results = [book];
@@ -65,7 +57,7 @@ export default function App() {
     }
   };
 
-  const handleAuth = async (e: React.FormEvent) => {
+  const handleAuth = async (e) => {
     e.preventDefault();
     try {
       const endpoint = authMode === "login" ? "/api/login" : "/api/register";
@@ -77,7 +69,7 @@ export default function App() {
       } else {
         setAuthMode("login");
       }
-    } catch (err: any) {
+    } catch (err) {
       setMessage({ text: err.response?.data?.message || "Auth failed", type: "error" });
     }
   };
@@ -87,7 +79,7 @@ export default function App() {
     setMessage({ text: "Logged out successfully", type: "success" });
   };
 
-  const submitReview = async (isbn: string) => {
+  const submitReview = async (isbn) => {
     try {
       const res = await axios.put(`/api/auth/review/${isbn}`, { review: newReview });
       setMessage({ text: res.data.message, type: "success" });
@@ -96,12 +88,12 @@ export default function App() {
       const updatedBook = await api.getBookByISBN(isbn);
       setSelectedBook(updatedBook);
       fetchBooks();
-    } catch (err: any) {
+    } catch (err) {
       setMessage({ text: err.response?.data?.message || "Failed to add review", type: "error" });
     }
   };
 
-  const deleteReview = async (isbn: string) => {
+  const deleteReview = async (isbn) => {
     try {
       const res = await axios.delete(`/api/auth/review/${isbn}`);
       setMessage({ text: res.data.message, type: "success" });
@@ -109,7 +101,7 @@ export default function App() {
       const updatedBook = await api.getBookByISBN(isbn);
       setSelectedBook(updatedBook);
       fetchBooks();
-    } catch (err: any) {
+    } catch (err) {
       setMessage({ text: err.response?.data?.message || "Failed to delete review", type: "error" });
     }
   };
@@ -203,7 +195,7 @@ export default function App() {
                 </div>
                 <div className="space-y-4">
                   <div className="flex bg-[#f8fafc] p-1 rounded-lg border border-slate-200">
-                    {(["title", "author", "isbn"] as const).map((type) => (
+                    {["title", "author", "isbn"].map((type) => (
                       <button
                         key={type}
                         onClick={() => setSearchType(type)}
@@ -282,7 +274,7 @@ export default function App() {
               )}
 
               {/* Main Catalog Explorer */}
-              <div className={`${user ? 'md:col-span-12' : 'md:col-span-12'} bg-white border border-slate-200 rounded-[16px] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.05)]`}>
+              <div className="md:col-span-12 bg-white border border-slate-200 rounded-[16px] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
                 <div className="font-[600] text-[12px] uppercase tracking-[0.05em] text-[#64748b] mb-6 flex justify-between items-center">
                   <span>Catalog Explorer</span>
                   <span className="badge">GET /api/books</span>

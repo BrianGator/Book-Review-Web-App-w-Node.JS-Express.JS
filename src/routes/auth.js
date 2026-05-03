@@ -1,10 +1,10 @@
 import express from "express";
-import { books } from "../db/books";
+import { books } from "../db/books.js";
 
 const authRouter = express.Router();
 
 // Task 8: Add or Modify a book review
-authRouter.put("/review/:isbn", (req: any, res) => {
+authRouter.put("/review/:isbn", (req, res) => {
   const isbn = req.params.isbn;
   const review = req.body.review;
   const username = req.user.data;
@@ -23,7 +23,7 @@ authRouter.put("/review/:isbn", (req: any, res) => {
 });
 
 // Task 9: Delete a book review
-authRouter.delete("/review/:isbn", (req: any, res) => {
+authRouter.delete("/review/:isbn", (req, res) => {
   const isbn = req.params.isbn;
   const username = req.user.data;
 

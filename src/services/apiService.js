@@ -12,7 +12,7 @@ export const getBooks = async () => {
   }
 };
 
-export const getBookByISBN = (isbn: string) => {
+export const getBookByISBN = (isbn) => {
   return axios.get(`${API_URL}/isbn/${isbn}`)
     .then(response => response.data)
     .catch(error => {
@@ -21,7 +21,7 @@ export const getBookByISBN = (isbn: string) => {
     });
 };
 
-export const getBooksByAuthor = async (author: string) => {
+export const getBooksByAuthor = async (author) => {
   try {
     const response = await axios.get(`${API_URL}/author/${author}`);
     return response.data;
@@ -31,7 +31,7 @@ export const getBooksByAuthor = async (author: string) => {
   }
 };
 
-export const getBooksByTitle = (title: string) => {
+export const getBooksByTitle = (title) => {
   return axios.get(`${API_URL}/title/${title}`)
     .then(response => response.data)
     .catch(error => {
