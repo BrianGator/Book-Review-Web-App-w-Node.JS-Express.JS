@@ -1,14 +1,14 @@
 # Task 11: GitHub Repository Fork Verification
 
 cURL Command:
-curl https://api.github.com/repos/<YOUR_GITHUB_USERNAME>/expressBookReview
+curl https://api.github.com/repos/BrianGator/Book-Review-Web-App-w-Node.JS-Express.JS
 
 Output:
 {
-  "name": "expressBookReview",
-  "full_name": "<YOUR_GITHUB_USERNAME>/expressBookReview",
+  "name": "Book-Review-Web-App-w-Node.JS-Express.JS",
+  "full_name": "BrianGator/Book-Review-Web-App-w-Node.JS-Express.JS",
   "owner": {
-    "login": "<YOUR_GITHUB_USERNAME>"
+    "login": "BrianGator"
   },
   "fork": true,
   "parent": {

@@ -1,8 +1,12 @@
 {
-  "name": "react-example",
+  "name": "book-review-web-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrianGator/Book-Review-Web-App-w-Node.JS-Express.JS.git"
+  },
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build",

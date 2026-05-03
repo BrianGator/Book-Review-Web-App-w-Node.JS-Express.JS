@@ -25,6 +25,9 @@ I have completed the development of your Online Book Review application. The pro
 
 The application is fully compiled and running on port 3000. You can now use the frontend to test all functionality or interact with the API via cURL/Postman as per your evaluation requirements.
 
+## GitHub Repository
+[BrianGator/Book-Review-Web-App-w-Node.JS-Express.JS](https://github.com/BrianGator/Book-Review-Web-App-w-Node.JS-Express.JS/)
+
 ## Development
 To start the application in development mode:
 ```bash
