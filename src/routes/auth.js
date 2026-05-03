@@ -31,7 +31,7 @@ authRouter.delete("/review/:isbn", (req, res) => {
   if (book) {
     if (book.reviews[username]) {
       delete book.reviews[username];
-      res.status(200).json({ message: `Reviews for the ISBN ${isbn} posted by the user ${username} deleted.` });
+      res.status(200).json({ message: `Review for the ISBN ${isbn} posted by the user ${username} deleted.` });
     } else {
       res.status(404).json({ message: "Review not found for this user" });
     }

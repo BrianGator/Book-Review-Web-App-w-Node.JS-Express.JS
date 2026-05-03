@@ -1,6 +1,6 @@
 # Task 3: Get books by author
 cURL Command:
-curl http://localhost:3000/api/author/Chinua%20Achebe
+curl http://localhost:3000/author/Chinua%20Achebe
 
 Output:
 [
@@ -8,6 +8,8 @@ Output:
     "isbn": "1",
     "author": "Chinua Achebe",
     "title": "Things Fall Apart",
-    "reviews": {}
+    "reviews": {
+      "reviewer1": "A powerful and moving story."
+    }
   }
 ]

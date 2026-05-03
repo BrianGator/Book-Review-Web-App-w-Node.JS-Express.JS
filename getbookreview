@@ -1,6 +1,8 @@
 # Task 5: Get book reviews
 cURL Command:
-curl http://localhost:3000/api/review/1
+curl http://localhost:3000/review/1
 
 Output:
-{}
+{
+  "reviewer1": "A powerful and moving story."
+}

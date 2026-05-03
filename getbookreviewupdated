@@ -1,8 +1,9 @@
 # Task 5 (Repeated): Get updated book reviews
 cURL Command:
-curl http://localhost:3000/api/review/1
+curl http://localhost:3000/review/1
 
 Output:
 {
-  "tester": "This is an amazing classic!"
+  "reviewer1": "A powerful and moving story.",
+  "tester": "Amazing book!"
 }

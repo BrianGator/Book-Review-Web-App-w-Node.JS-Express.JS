@@ -1,8 +1,8 @@
 # Task 7: Login as a registered user
 cURL Command:
-curl -X POST -c cookie.txt -H "Content-Type: application/json" -d '{"username": "tester", "password": "password123"}' http://localhost:3000/api/login
+curl -X POST -c cookie.txt -H "Content-Type: application/json" -d '{"username": "tester", "password": "password123"}' http://localhost:3000/customer/login
 
 Output:
 {
-  "message": "User successfully logged in"
+  "message": "Customer successfully logged in"
 }
