@@ -141,7 +141,7 @@ publicRouter.post("/register", async (req, res) => {
   }
   const passwordHash = await bcrypt.hash(password, 10);
   users.push({ username, passwordHash });
-  res.status(201).json({ message: "Customer successfully registered. Now you can login" });
+  res.status(201).json({ message: "confirmed the successful registration of a new user." });
 });
 
 // Task 7: Login user

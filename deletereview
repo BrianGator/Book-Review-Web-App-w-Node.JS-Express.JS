@@ -4,5 +4,5 @@ curl -X DELETE -b cookie.txt http://localhost:3000/review/1
 
 Output:
 {
-  "message": "Review for the ISBN 1 posted by the user tester deleted."
+    "message": "Review for the ISBN 1 posted by the user tester deleted."
 }

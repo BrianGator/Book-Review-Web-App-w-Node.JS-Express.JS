@@ -4,5 +4,5 @@ curl -X POST -H "Content-Type: application/json" -d '{"username": "tester", "pas
 
 Output:
 {
-  "message": "Customer successfully registered. Now you can login"
+  "message": "confirmed the successful registration of a new user."
 }

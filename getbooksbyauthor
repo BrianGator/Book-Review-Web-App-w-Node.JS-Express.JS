@@ -4,12 +4,12 @@ curl http://localhost:3000/author/Chinua%20Achebe
 
 Output:
 [
-  {
-    "isbn": "1",
-    "author": "Chinua Achebe",
-    "title": "Things Fall Apart",
-    "reviews": {
-      "reviewer1": "A powerful and moving story."
+    {
+        "isbn": "1",
+        "author": "Chinua Achebe",
+        "title": "Things Fall Apart",
+        "reviews": {
+            "reviewer1": "A powerful and moving story."
+        }
     }
-  }
 ]

@@ -1,0 +1,43 @@
+# Project: Online Book Review Application
+**Course:** Developing JavaScript Back-End Apps with Node.js and Express
+
+## Project Overview
+Develop a server-side RESTful web service using Node.js and Express.js to manage book ratings and reviews for an online retailer.
+
+## Key Features & Capabilities
+*   **Book Management:**
+    *   Retrieve a list of all available books.
+    *   Search for specific books by ISBN, Author, or Title.
+    *   Retrieve reviews/comments for specified books.
+*   **User Management & Security:**
+    *   Register new users.
+    *   Secure Login system.
+    *   Implement Session and JWT authentication.
+*   **Review Management (Authenticated Users Only):**
+    *   Add new book reviews.
+    *   Modify own reviews.
+    *   Delete own reviews.
+*   **Performance:**
+    *   Support concurrent access for multiple users.
+    *   Use Async/Await, Promises, or Callbacks to ensure non-blocking operations.
+
+## Evaluation Criteria (30 Marks Total)
+
+### General Users (Public Access)
+*   **Task 1 (2 pts):** `getallbooks` - Retrieve all books.
+*   **Task 2 (2 pts):** `getbooksbyISBN` - Search by ISBN.
+*   **Task 3 (2 pts):** `getbooksbyauthor` - Search by Author.
+*   **Task 4 (2 pts):** `getbooksbytitle` - Search by Title.
+*   **Task 5 (2 pts):** `getbookreview` - Display initial book review.
+*   **Task 6 (3 pts):** `register` - Successful new user registration.
+*   **Task 7 (3 pts):** `login` - Successful user login.
+
+### Registered Users (Authenticated Access)
+*   **Task 8 (2 pts):** `reviewadded` - Message and updated reviews after adding/modifying.
+*   **Task 9 (2 pts):** `deletereview` - Message after deleting a review.
+
+### Async Implementation (8 Marks)
+*   **Task 10 (8 pts):** Implementation in `general.js` using Async/Await or Promises (with Axios) to retrieve book details by author, title, and ISBN.
+
+### Repository Management
+*   **Task 11 (2 pts):** `githubrepo` - Verify repository is forked from `ibm-developer-skills-network/expressBookReview`.

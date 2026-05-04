@@ -1,0 +1,51 @@
+# Developer Summary: Online Book Review Application
+
+## Application Overview
+The **Book-Review-Web-App** is a back-end RESTful application designed to manage a library of books and their associated reviews. It allows general users to browse books and specific reviews, while registered users can securely add, modify, or delete their own reviews.
+
+---
+
+## Technologies Used
+- **Node.js**: The core runtime environment for executing JavaScript on the server.
+- **Express.js**: A flexible web framework used to design the RESTful routes and handle HTTP requests/responses.
+- **JSON Web Token (JWT)**: Utilized for secure, token-based authentication to verify user identity for protected actions.
+- **Express Session**: Handles session management, storing authentication tokens on the server-side to maintain user state.
+- **Bcryptjs**: Used for hashing user passwords before storage, ensuring sensitive data security.
+- **Axios**: A Promise-based HTTP client used to demonstrate advanced asynchronous patterns (Async/Await and Promises) during internal API calls.
+- **React & Vite**: Provides a modern frontend workspace and build system for the application's user interface.
+
+---
+
+## Programming Concepts
+- **RESTful API Architecture**: Implementation of CRUD (Create, Read, Update, Delete) operations using standard HTTP methods:
+    - `GET`: For retrieving books and reviews.
+    - `POST`: For user registration and login.
+    - `PUT`: For adding or updating a specific review.
+    - `DELETE`: For removing a user's own review.
+- **Custom Middleware**: Verification logic that intercepts requests to protected routes (`/customer/auth/*`) to ensure a valid JWT is present in the session.
+- **Asynchronous Operations**: 
+    - **Async/Await**: Used for clean, readable asynchronous code during password hashing and internal API fetching.
+    - **Promises**: Demonstrated through Axios `.then()` and `.catch()` chains for error resilience and non-blocking performance.
+    - **Callbacks**: Utilized in JWT verification and legacy request handling styles.
+- **In-Memory Data Storage**: Simulates a database environment using JavaScript objects and arrays for fast development and testing.
+
+---
+
+## File Structure & Descriptions
+
+### Core Server Files
+- **`/server.js`**: The heart of the application. It initializes the Express server, configures session middleware, implements the global authentication gate, and links all API routes.
+- **`/src/routes/general.js`**: Managed the "General User" experience. Includes public search routes (ISBN, Author, Title) and the critical async implementations for Tasks 10-13 using Axios.
+- **`/src/routes/auth.js`**: Handles "Registered User" actions, specifically the creation and management of book reviews.
+
+### Data Management
+- **`/src/db/books.js`**: Stores the static repository of book data, including titles, authors, and existing reviews.
+- **`/src/db/users.js`**: Stores registered user profiles and hashed credentials.
+
+### Documentation & Evaluation Results
+- **`Requirements.txt`**: A comprehensive guide to the project's features and grading criteria.
+- **`/getallbooks`, `/getbooksbyISBN`, ...**: Individual files documenting the successful testing of each task using `cURL` commands and their corresponding JSON output.
+- **`Dev-Summary.txt`**: This document, providing a high-level technical overview for developers.
+
+### Frontend
+- **`/index.html`** & **`/src/App.jsx`**: Provide the structure and logic for the visual interface of the book shop.

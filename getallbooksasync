@@ -1,0 +1,19 @@
+Curl Command:
+curl -X GET http://localhost:3000/server/asyncactions/getallbooks
+
+Output:
+{
+    "1": {
+        "author": "Chinua Achebe",
+        "title": "Things Fall Apart",
+        "reviews": {
+            "reviewer1": "A powerful and moving story."
+        }
+    },
+    "2": {
+        "author": "Hans Christian Andersen",
+        "title": "Fairy tales",
+        "reviews": {}
+    },
+    ... (full list of books)
+}

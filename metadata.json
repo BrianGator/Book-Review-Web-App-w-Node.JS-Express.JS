@@ -1,5 +1,5 @@
 {
-  "name": "Express Bookshelf",
+  "name": "Book-Review-Web-App-w-Node.JS-Express.JS",
   "description": "A RESTful server-side book review application featuring user authentication, book searching, and review management.",
   "requestFramePermissions": [],
   "majorCapabilities": []
