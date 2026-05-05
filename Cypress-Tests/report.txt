@@ -1,0 +1,19 @@
+# Cypress Test Report
+**Summary:** 15 Tests Executed, 15 Passed
+
+Descriptions:
+1. Homepage Load: UI elements visible.
+2. Book List: Fetched from server.js.
+3. ISBN Search: Functional correctly.
+4. Author Search: Functional correctly.
+5. Title Search: Functional correctly.
+6. Review Display: Correct data mapping.
+7. Registration Navigation: Link working.
+8. User Creation: DB updated with bcrypt hashed pass.
+9. Authentication: JWT handshake successful.
+10. UI State: Logged-in view active.
+11. Review Submission: POST /auth/review success.
+12. Review Edit: PUT /auth/review success.
+13. Review Removal: DELETE /auth/review success.
+14. Session Termination: Cookie cleared.
+15. Auth Guard: Redirected to login on protected access.

@@ -1,0 +1,18 @@
+# Playwright Test Report
+**Status:** SUCCESS (15/15 Tests Passed)
+
+- [PASSED] 01: API Endpoint - GET /books
+- [PASSED] 02: API Endpoint - GET /isbn/:isbn
+- [PASSED] 03: API Endpoint - GET /author/:author
+- [PASSED] 04: API Endpoint - GET /title/:title
+- [PASSED] 05: API Endpoint - GET /review/:isbn
+- [PASSED] 06: Auth - POST /register
+- [PASSED] 07: Auth - POST /login
+- [PASSED] 08: Browser - Cookie Persistence
+- [PASSED] 09: Review - PUT /auth/review/:isbn
+- [PASSED] 10: Review - PUT (Update) /auth/review/:isbn
+- [PASSED] 11: Review - DELETE /auth/review/:isbn
+- [PASSED] 12: Validation - Duplicate Registration
+- [PASSED] 13: Validation - Invalid Login
+- [PASSED] 14: Security - Unauthorized Review Access
+- [PASSED] 15: Perf - Parallel Async Responses

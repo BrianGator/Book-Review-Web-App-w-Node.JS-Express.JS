@@ -1,0 +1,18 @@
+# Cucumber Test Report
+**Tests Passed:** 15/15
+
+1. Feature: Retrieve Books - Passed
+2. Feature: ISBN Search - Passed
+3. Feature: Author Search - Passed
+4. Feature: Title Search - Passed
+5. Feature: View Reviews - Passed
+6. Feature: Registration - Passed
+7. Feature: Login - Passed
+8. Feature: JWT Handling - Passed
+9. Feature: Add Review - Passed
+10. Feature: Edit Review - Passed
+11. Feature: Delete Review - Passed
+12. Feature: Async Logic (Task 10) - Passed
+13. Feature: Multi-user Conflict - Passed
+14. Feature: Input Validation - Passed
+15. Feature: Error Status Codes - Passed

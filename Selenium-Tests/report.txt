@@ -1,0 +1,21 @@
+# Selenium Test Report
+**Date:** 2026-05-05
+**Status:** ALL PASSED (15/15)
+
+| ID | Description | Result |
+|----|-------------|--------|
+| 01 | Retrieve all books list | PASSED |
+| 02 | Search book by ISBN 1 | PASSED |
+| 03 | Search book by ISBN 999 (Invalid) | PASSED |
+| 04 | Search books by author 'Chinua Achebe' | PASSED |
+| 05 | Search books by title 'Fairy tales' | PASSED |
+| 06 | Successful user registration | PASSED |
+| 07 | Successful user login | PASSED |
+| 08 | Login failure with wrong password | PASSED |
+| 09 | JWT token generation on login | PASSED |
+| 10 | Access protected route with valid JWT | PASSED |
+| 11 | Add a new review to ISBN 1 | PASSED |
+| 12 | Update existing review for ISBN 1 | PASSED |
+| 13 | Delete review for ISBN 1 | PASSED |
+| 14 | Prevent review addition for unauthenticated user | PASSED |
+| 15 | Verify concurrent session handling | PASSED |

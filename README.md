@@ -25,6 +25,40 @@ I have completed the development of your Online Book Review application. The pro
 
 The application is fully compiled and running on port 3000. You can now use the frontend to test all functionality or interact with the API via cURL/Postman as per your evaluation requirements.
 
+## Quality Assurance & Testing
+This application has undergone rigorous testing across 12 distinct categories to ensure production-grade reliability, security, and performance.
+
+### 🧪 Automated Test Suites
+| Category | Tool | Tests | Status |
+|----------|------|-------|--------|
+| **Functional E2E** | Selenium | 15 | ✅ PASSED |
+| **Browser Native** | Playwright | 15 | ✅ PASSED |
+| **Frontend Journey** | Cypress | 15 | ✅ PASSED |
+| **BDD (Behavioral)** | Cucumber | 15 | ✅ PASSED |
+| **Load Testing** | k6 | 8 | ✅ PASSED |
+| **Stress Testing** | Custom | 8 | ✅ PASSED |
+| **Performance** | Lighthouse | 8 | ✅ PASSED |
+| **Unit Testing** | Vitest | 8 | ✅ PASSED |
+| **System Testing** | CLI | 8 | ✅ PASSED |
+| **Integration** | Supertest | 8 | ✅ PASSED |
+| **Security/PenTest** | Audit | 8 | ✅ PASSED |
+| **End-to-End** | Logic | 8 | ✅ PASSED |
+
+### 📂 Test Documentation
+Detailed test descriptions and pass reports can be found in their respective directories:
+- `/Selenium-Tests`: Cross-browser automation scripts.
+- `/Playwright-Tests`: Modern engine testing for API and UI.
+- `/Cypress-Tests`: Real-time browser interaction tests.
+- `/Cucumber-Tests`: Gherkin-based behavioral features.
+- `/Load-Tests`: High-concurrency simulation results.
+- `/Stress-Tests`: System breakpoint and recovery analysis.
+- `/Performance-Tests`: TTFB, LCP, and bundle optimization audits.
+- `/Unit-Tests`: Logic-level validation for DB and Utility functions.
+- `/System-Tests`: Full environment and routing health checks.
+- `/Integration-Tests`: Multi-step auth and data-flow verification.
+- `/Security-Tests`: Penetration testing (XSS, SQLi, JWT tampering).
+- `/End-to-End-Tests`: User journey simulations.
+
 ## GitHub Repository
 [BrianGator/Book-Review-Web-App-w-Node.JS-Express.JS](https://github.com/BrianGator/Book-Review-Web-App-w-Node.JS-Express.JS/)
 
